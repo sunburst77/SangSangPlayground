@@ -17,6 +17,10 @@
 - Tailwind CSS (CDN)
 - Vanilla JavaScript
 
+## 스크린샷
+
+![상상놀이터 랜딩 페이지 미리보기](./og-image.png)
+
 ## 로컬 실행
 
 정적 페이지 프로젝트입니다.
