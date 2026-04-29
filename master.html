@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banner Card Master – Neo Brutalism</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+    :root {
+      --page-bg: #f3f0e8;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: -0.03em;
+      background-color: var(--page-bg);
+    }
+    .font-jua { font-family: 'Jua', sans-serif; letter-spacing: normal; }
+    .brutalist-shadow { box-shadow: 6px 6px 0px #000; }
+    .brutalist-shadow-sm { box-shadow: 4px 4px 0px #000; }
+
+    /* 버튼: 호버 시 눌리는 느낌 (이동 + 섀도우 축소) */
+    .btn-press {
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .btn-press:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #000;
+    }
+    .btn-press:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0 0 0 #000;
+    }
+
+    /* 파스텔 테마 (솔리드 / 서피스 / 뮤트 / 액센트 / 뱃지 포인트) */
+    .theme-lemon {
+      /* 첫 배너 솔리드 = Tailwind bg-yellow-300 과 동일 */
+      --solid: #fde047;
+      --surface: #fffbeb;
+      --mute: #f5e6b8;
+      --accent: #facc15;
+      --badgeHi: #fde047;
+    }
+    .theme-peach {
+      --solid: #ffd6c9;
+      --surface: #fff4f0;
+      --mute: #f0cfc0;
+      --accent: #fdba9c;
+      --badgeHi: #fecaca;
+    }
+    .theme-mint {
+      --solid: #a7e9cc;
+      --surface: #ecfdf5;
+      --mute: #c6ebe0;
+      --accent: #6ee7b7;
+      --badgeHi: #a7f3d0;
+    }
+    .theme-lavender {
+      --solid: #ddd6fe;
+      --surface: #f5f3ff;
+      --mute: #e2ddfa;
+      --accent: #c4b5fd;
+      --badgeHi: #d8b4fe;
+    }
+    .theme-sky {
+      --solid: #bae6fd;
+      --surface: #f0f9ff;
+      --mute: #c9e8f7;
+      --accent: #7dd3fc;
+      --badgeHi: #7dd3fc;
+    }
+    .theme-rose {
+      --solid: #fecdd3;
+      --surface: #fff1f2;
+      --mute: #f5ccd4;
+      --accent: #fda4af;
+      --badgeHi: #fda4af;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center gap-16 py-20 px-4">
+
+  <p class="text-black font-black text-sm tracking-[0.2em] uppercase border-b-4 border-black pb-1 rounded-xl inline-flex items-center gap-2">
+    <i class="ri-layout-masonry-line text-base"></i>
+    BANNER CARD COMPONENTS
+  </p>
+
+  <!-- ═══ 레몬 ═══ -->
+  <section class="theme-lemon flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 레몬</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 피치 ═══ -->
+  <section class="theme-peach flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 피치</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 민트 ═══ -->
+  <section class="theme-mint flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 민트</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 라벤더 ═══ -->
+  <section class="theme-lavender flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 라벤더</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 스카이 ═══ -->
+  <section class="theme-sky flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 스카이</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 로즈 ═══ -->
+  <section class="theme-rose flex w-full max-w-4xl flex-col gap-12">
+    <p class="font-jua text-center text-lg text-black/50">파스텔 · 로즈</p>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--solid)]">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-stretch">
+        <div class="flex min-w-0 flex-1 flex-col gap-5 p-8 md:p-12 lg:p-14">
+          <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+            <i class="ri-sparkling-2-fill text-base text-[var(--badgeHi)]"></i>
+            NEW SEASON
+          </span>
+          <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+            아이들의 상상력을 무한히 키워주는 게임
+          </h2>
+          <p class="text-gray-800 text-base md:text-lg font-bold leading-relaxed max-w-md">
+            창의적인 놀이와 배움이 하나가 되는 특별한 경험.<br/>지금 바로 우리 아이의 세상을 더 넓혀보세요.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--surface)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">지금 시작하기</a>
+            <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">자세히 보기</a>
+          </div>
+        </div>
+        <div class="relative w-full shrink-0 overflow-hidden md:flex md:w-[min(38%,320px)] md:max-w-[320px] md:min-h-0 md:self-stretch">
+          <img src="back.png" alt="" class="block h-[220px] w-full object-cover object-center md:h-full md:min-h-full md:flex-1" width="320" height="480" />
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full rounded-[2rem] border-4 border-black brutalist-shadow overflow-hidden bg-[var(--surface)]">
+      <div class="relative z-10 flex flex-col gap-5 p-10 md:p-14">
+        <span class="font-jua inline-flex items-center self-start gap-1.5 bg-black text-[var(--badgeHi)] text-sm px-3.5 py-1.5 rounded-2xl shadow-none uppercase tracking-wide">
+          <i class="ri-timer-flash-line text-base text-[var(--badgeHi)]"></i>
+          LIMITED OFFER
+        </span>
+        <h2 class="font-jua text-black text-4xl md:text-5xl font-normal leading-tight">
+          특별 할인 혜택으로 <span class="bg-[var(--accent)] px-2 py-0.5 inline-block rounded-2xl -skew-x-3">더 스마트하게</span> 시작하세요
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg font-bold leading-relaxed max-w-md">
+          기간 한정 프로모션! 지금 가입하면 첫 3개월 50% 할인 혜택을 드립니다. 놓치지 마세요.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--accent)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">혜택 받기</a>
+          <a href="#" class="font-jua inline-flex items-center justify-center bg-[var(--mute)] text-black text-base font-normal px-6 py-3 border-2 border-black brutalist-shadow-sm btn-press rounded-xl">요금제 비교</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

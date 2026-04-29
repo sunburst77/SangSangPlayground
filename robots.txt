@@ -1,0 +1,5 @@
+# GitHub Pages: sunburst77.github.io/SangSangPlayground
+User-agent: *
+Allow: /
+
+Sitemap: https://sunburst77.github.io/SangSangPlayground/sitemap.xml
