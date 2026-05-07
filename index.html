@@ -1187,35 +1187,35 @@
   </footer>
 
   <!-- ═══════════════ FLOATING COUNTDOWN ═══════════════ -->
-  <div id="countdown-modal" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60] w-[196px] sm:w-[304px] rounded-2xl border-4 border-black bg-[#fde047] text-black brutalist-shadow-sm overflow-hidden transition-all duration-300">
-    <button type="button" onclick="document.getElementById('countdown-modal').style.display='none'" class="absolute top-2.5 right-3 text-black/45 hover:text-black text-lg leading-none font-bold" aria-label="닫기">&times;</button>
-    <div class="px-4 py-3 sm:px-6 sm:py-5 flex flex-col gap-2 sm:gap-3">
-      <span class="font-jua text-black/70 text-[10px] sm:text-xs uppercase tracking-widest pr-6">Limited Offer</span>
-      <p class="font-jua text-black text-sm sm:text-base leading-snug pr-2">할인 종료까지</p>
+  <div id="countdown-modal" class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-[60] w-[148px] sm:w-[304px] rounded-xl sm:rounded-2xl border-4 border-black bg-[#fde047] text-black brutalist-shadow-sm overflow-hidden transition-all duration-300">
+    <button type="button" onclick="document.getElementById('countdown-modal').style.display='none'" class="absolute top-1.5 right-2.5 sm:top-2.5 sm:right-3 text-black/45 hover:text-black text-base sm:text-lg leading-none font-bold" aria-label="닫기">&times;</button>
+    <div class="px-3 py-2 sm:px-6 sm:py-5 flex flex-col gap-1.5 sm:gap-3">
+      <span class="font-jua text-black/70 text-[9px] sm:text-xs uppercase tracking-widest pr-4 sm:pr-6">Limited Offer</span>
+      <p class="font-jua text-black text-xs sm:text-base leading-snug pr-2">할인 종료까지</p>
       <!-- 모바일: 클릭으로 토글, 데스크탑: 항상 전체 표시 -->
       <div id="countdown-timer" class="flex w-full items-center justify-center gap-0.5 sm:gap-1 px-0 cursor-pointer sm:cursor-default" onclick="cdToggle()" title="탭하여 전체 보기">
-        <div class="flex flex-col items-center bg-black/10 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 min-w-[2.1rem] sm:min-w-[2.75rem] shrink-0">
-          <span id="cd-days" class="font-jua text-black text-lg sm:text-2xl leading-none">00</span>
-          <span class="text-black/50 text-[9px] sm:text-[10px] font-bold mt-0.5">일</span>
+        <div class="flex flex-col items-center bg-black/10 rounded-md sm:rounded-lg px-1 sm:px-2 py-1 sm:py-1.5 min-w-[1.75rem] sm:min-w-[2.75rem] shrink-0">
+          <span id="cd-days" class="font-jua text-black text-base sm:text-2xl leading-none">00</span>
+          <span class="text-black/50 text-[8px] sm:text-[10px] font-bold mt-0.5">일</span>
         </div>
         <!-- 시간/분/초: 모바일 기본 숨김, 클릭 시 표시 -->
-        <span id="cd-sep1" class="font-jua text-black/35 text-base sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
-        <div id="cd-hours-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 min-w-[2.1rem] sm:min-w-[2.75rem] shrink-0">
-          <span id="cd-hours" class="font-jua text-black text-lg sm:text-2xl leading-none">00</span>
-          <span class="text-black/50 text-[9px] sm:text-[10px] font-bold mt-0.5">시간</span>
+        <span id="cd-sep1" class="font-jua text-black/35 text-sm sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
+        <div id="cd-hours-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-md sm:rounded-lg px-1 sm:px-2 py-1 sm:py-1.5 min-w-[1.75rem] sm:min-w-[2.75rem] shrink-0">
+          <span id="cd-hours" class="font-jua text-black text-base sm:text-2xl leading-none">00</span>
+          <span class="text-black/50 text-[8px] sm:text-[10px] font-bold mt-0.5">시간</span>
         </div>
-        <span id="cd-sep2" class="font-jua text-black/35 text-base sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
-        <div id="cd-mins-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 min-w-[2.1rem] sm:min-w-[2.75rem] shrink-0">
-          <span id="cd-mins" class="font-jua text-black text-lg sm:text-2xl leading-none">00</span>
-          <span class="text-black/50 text-[9px] sm:text-[10px] font-bold mt-0.5">분</span>
+        <span id="cd-sep2" class="font-jua text-black/35 text-sm sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
+        <div id="cd-mins-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-md sm:rounded-lg px-1 sm:px-2 py-1 sm:py-1.5 min-w-[1.75rem] sm:min-w-[2.75rem] shrink-0">
+          <span id="cd-mins" class="font-jua text-black text-base sm:text-2xl leading-none">00</span>
+          <span class="text-black/50 text-[8px] sm:text-[10px] font-bold mt-0.5">분</span>
         </div>
-        <span id="cd-sep3" class="font-jua text-black/35 text-base sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
-        <div id="cd-secs-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 min-w-[2.1rem] sm:min-w-[2.75rem] shrink-0">
-          <span id="cd-secs" class="font-jua text-black text-lg sm:text-2xl leading-none">00</span>
-          <span class="text-black/50 text-[9px] sm:text-[10px] font-bold mt-0.5">초</span>
+        <span id="cd-sep3" class="font-jua text-black/35 text-sm sm:text-lg shrink-0 pb-1 hidden sm:inline">:</span>
+        <div id="cd-secs-wrap" class="hidden sm:flex flex-col items-center bg-black/10 rounded-md sm:rounded-lg px-1 sm:px-2 py-1 sm:py-1.5 min-w-[1.75rem] sm:min-w-[2.75rem] shrink-0">
+          <span id="cd-secs" class="font-jua text-black text-base sm:text-2xl leading-none">00</span>
+          <span class="text-black/50 text-[8px] sm:text-[10px] font-bold mt-0.5">초</span>
         </div>
         <!-- 모바일 전용: 펼치기 힌트 -->
-        <span id="cd-expand-hint" class="sm:hidden text-black/35 text-[10px] font-bold ml-0.5 pb-0.5 select-none">▸</span>
+        <span id="cd-expand-hint" class="sm:hidden text-black/35 text-[9px] font-bold ml-0.5 pb-0.5 select-none">▸</span>
       </div>
       <a href="#pricing" class="font-jua hidden sm:inline-flex items-center justify-center bg-black text-[#fde047] text-sm font-normal px-4 py-2 border-2 border-black brutalist-shadow-sm btn-press rounded-xl mt-1 gap-1.5">
         <i class="ri-gift-line"></i> 할인 혜택 보기
